@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 // import MySkill from './pages/Myskill/Myskill';
+import Contact from './pages/Contact/Contact';
 import Portofolio from './pages/Portofolio/portofolio';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
@@ -10,7 +11,7 @@ import { BrowserRouter} from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Portofolio/>
+    <Contact/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
