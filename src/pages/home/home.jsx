@@ -1,100 +1,53 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import pp from "../../assets/Ellipse 2.png";
-
+import Navbar from "../../components/Navbar";
+import "./home.css";
+import pp from "../../assets/isa.jpg";
 function Home() {
-  const navigate = useNavigate();
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-    <div className="Home">
-      {/* navbar */}
-      <div className="flex justify-center bg-purple-800">
-        <div className="flex items-center justify-between z-20 py-5 my-auto  w-11/12">
-          <div className="flex gap-x-5">
-            <img className="w-14" src={pp} alt="" />
-            <h1 className="sm:text-3xl text-xl text-white logo">
-              Fudail Ramadhani
-            </h1>
-          </div>
-          <div>
-            <svg
-              onClick={() => setNavbarOpen(!navbarOpen)}
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6   text-white flex mx-auto sm:hidden"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-
-            <ul className="hidden sm:flex text-sm mr-7 mt-0 text-white cursor-pointer">
-              <li onClick={() => {
-                navigate("/")
-              }} className="mr-7 hover:opacity-75 ">Home</li>
-              <li  onClick={() => {
-                navigate("/MySkill")
-              }} className="mr-7 hover:opacity-75">My Skill</li>
-              <li  onClick={() => {
-                navigate("/Portofolio")
-              }} className="mr-7 hover:opacity-75">Portofolio</li>
-              <li onClick={() => {
-                navigate("/Contact")
-              }} className="hover:opacity-75">Contact</li>
-            </ul>
-          </div>
+    <div className="Home bg-black ">
+      {/* Body */}
+      {/* Top */}
+      <div className="flex sm:flex-row flex-col justify-center sm:justify-between items-center w-5/6 mx-auto  gap-x-0">
+        <div className="contentRight w-1/2 text-white">
+          <h1 className="text-5xl font-bold ">
+            HI THERE, I’M A SOFTWARE ENGENEERING
+          </h1>
+          <p className="text-2xl font-light w-10/12 pt-9">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus quam
+            mollis porttitor pulvinar. Ullamcorper vitae eget nec diam bibendum
+            scelerisque. Luctus scelerisque et blandit sed eu commodo feugiat
+            proin. Pretium amet sit sed ac ut amet netus porta mi. Dictumst
+            dolor a velit sem neque massa in tincidunt sollicitudin. Posuere
+            risus tortor, euismod at porttitor et mi nunc. In ornare ultricies
+            sed fusce quis quam. Vestibulum porta adipiscing tellus egestas
+            vitae.
+          </p>
+        </div>
+        <div className="contentLeft text-white justify-start pt-24">
+          <h1 className="text-3xl font-light pb-8">Nice to meet You</h1>
+          <img src={pp} alt="" />
         </div>
       </div>
-      <div
-        className={
-          "flex flex-grow items-center sm:hidden" +
-          (navbarOpen ? " flex" : " hidden")
-        }
-        id="example-navbar-danger"
-      >
-        <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li className="nav-item">
-            <a
-              className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#home"
-            >
-              <i className="fab fa-facebook-square  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Home</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#skills"
-            >
-              <i className="fab fa-twitter  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Skills</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#services"
-            >
-              <i className="fab fa-pinterest  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Services</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#project"
-            >
-              <i className="fab fa-pinterest  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">My Project</span>
-            </a>
-          </li>
-        </ul>
+      {/* Top */}
+      {/* Bottom */}
+      <div className="bottom mx-auto text-white flex flex-col justify-start pl-36">
+        <h1 className="text-5xl font-bold w-1/2">
+          And knowing about fish is my hobby
+        </h1>
+        <p className="w-11/12 pt-12 text-2xl pb-28">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus quam
+          mollis porttitor pulvinar. Ullamcorper vitae eget nec diam bibendum
+          scelerisque. Luctus scelerisque et blandit sed eu commodo feugiat
+          proin. Pretium amet sit sed ac ut amet netus porta mi. Dictumst dolor
+          a velit sem neque massa in tincidunt sollicitudin. Posuere risus
+          tortor, euismod at porttitor et mi nunc. In ornare ultricies sed fusce
+          quis quam. Vestibulum porta adipiscing tellus egestas vitae. Sit erat
+          nibh dignissim ipsum, sed dignissim purus, pretium. Vitae pretium
+          dolor vitae, in a elementum, vel tristique.
+        </p>
       </div>
-      {/* navbar */}
+      {/* Bottom */}
+      {/* Body */}
     </div>
   );
 }

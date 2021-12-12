@@ -5,9 +5,13 @@ import Home from "./pages/home/home";
 import MySkill from "./pages/Myskill/Myskill";
 import Portofolio from "./pages/Portofolio/portofolio";
 import Contact from "./pages/Contact/Contact";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
+    {/* navbar */}
+    <Navbar></Navbar>
+      {/* navbar */}
       <Routes>
         <Route path="/" element={<Home />} />
 

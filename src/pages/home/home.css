@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Gorditas&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.contentRight h1 {
+  font-family: "Gorditas", cursive;
+}
+
+.contentRight p {
+  font-family: "Roboto", sans-serif;
+}
+
+.contentLeft img {
+  width: 658px;
+}
+
+.bottom h1{
+    font-family: "Gorditas", cursive;
+}
+
+.bottom p{
+    font-family: "Roboto", sans-serif;
+}
