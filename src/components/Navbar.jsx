@@ -5,7 +5,7 @@ function Navbar() {
     const navigate = useNavigate();
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        <div>
+        <div data-aos="fade-down">
             <div className="flex justify-center bg-purple-800">
         <div className="flex items-center justify-between z-20 py-5 my-auto  w-11/12">
           <div className="flex gap-x-5">
@@ -46,48 +46,58 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      
       <div
         className={
-          "flex flex-grow items-center sm:hidden" +
+          "flex flex-grow items-center sm:hidden bg-black " +
           (navbarOpen ? " flex" : " hidden")
         }
         id="example-navbar-danger"
       >
-        <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li className="nav-item">
+        <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
+          <li className="nav-item " onClick={() => {
+                navigate("/")
+              }}>
             <a
               className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
               href="#home"
             >
-              <i className="fab fa-facebook-square  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Home</span>
+              <i className="fab fa-facebook-square  leading-lg text-white opacity-75 "></i>
+              <span className="ml-2 ">Home</span>
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={() => {
+                navigate("/MySkill")
+              }}>
             <a
               className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#skills"
+              href="#MySkill"
             >
               <i className="fab fa-twitter  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Skills</span>
+              <span className="ml-2">MySkill</span>
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={() => {
+                navigate("/Portofolio")
+              }}>
             <a
               className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
-              href="#services"
+              href="#Portofolio"
             >
               <i className="fab fa-pinterest  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">Services</span>
+              <span className="ml-2">Portofolio</span>
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={() => {
+                navigate("/Contact")
+              }}>
             <a
               className="px-3 py-2 flex items-center text-xs   leading-snug text-white hover:opacity-75"
               href="#project"
             >
               <i className="fab fa-pinterest  leading-lg text-white opacity-75"></i>
-              <span className="ml-2">My Project</span>
+              <span className="ml-2">Contact</span>
             </a>
           </li>
         </ul>
